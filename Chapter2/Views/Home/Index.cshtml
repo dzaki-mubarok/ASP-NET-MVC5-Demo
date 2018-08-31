@@ -1,0 +1,41 @@
+﻿
+<!--ini Regular View-->
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet"/>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet"/>
+    <title>Index</title>
+    <style>
+        .btn a {
+            color: white;
+            text-decoration: none
+        }
+
+        body {
+            background-color: #F1F1F1;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center"> 
+        <h1>Undangan Reunian IOSTREAM</h1>
+        <!--Anotasi ViewBag memudahkan kita dlam memanggil suatu propeti "Selamat" dr controller (Dynamic Data Output)-->
+        @ViewBag.Selamat Teman-teman semua :)
+        
+        <p>Kita akan mengadakan pesta kecil-kecilan. ayo ramaikan...!!! </p>
+
+        <div class="btn btn-success">
+            <!--Action Link akan mengarahkan ke method di homecontroller kmudian add link ke viewnya(FormReservasi)-->
+            @Html.ActionLink("Book Now", "FormReservasi")
+        </div>
+
+    </div>
+</body>
+</html>
