@@ -20,7 +20,7 @@ namespace Chapter2.Controllers
         //    //atau return "ID number : " + id + "\n nama : " + Request.QueryString[nama];
         //}
 
-            //setiap method dr controller memiliki url acion masing2
+            //setiap method dr controller memiliki url action masing2
         
 
         //GET: Home/Index
