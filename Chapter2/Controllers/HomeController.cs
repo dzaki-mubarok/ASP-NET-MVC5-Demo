@@ -2,7 +2,17 @@
 using System.Web.Mvc;
 
 /// <summary>
-/// Chapter 1 _ 
+/// Chapter 1 _ 1. bikin index action method beserta view nya.(panggil viewbag.selamat di view)
+/// 2. Designing a Data Model (for storing, validating, and confirming dari FormReservasi)  - GuestResponse.cs
+/// 3. bikin action link ke FormReservasi
+/// 4. bikin FormReservasi action method beserta view nya arahkan modelclass di viewnya ke GuestResponse
+/// 5. bikin form reservasinya kemudian Add an Action Method to Support POST Requests in the HomeController.cs [httpget] [httpPost]
+/// 6. bikin new view thanks.cshtml
+/// 7. adding Validation in the GuestResponse.cs errormessage juga di post homecontroller nya
+/// 8. adding Html.ValidationSummary Helper Method di FormReservasi
+/// 9. buat style.css utk style error nya
+/// 10. add bootstrap dan ubah style view2 nya
+/// 11. add WebMail Helper in the Thanks.cshtml 
 /// </summary>
 
 
@@ -20,7 +30,7 @@ namespace Chapter2.Controllers
         //    //atau return "ID number : " + id + "\n nama : " + Request.QueryString[nama];
         //}
 
-            //setiap method dr controller memiliki url acion masing2
+            //setiap method dr controller memiliki url action masing2
         
 
         //GET: Home/Index
@@ -42,7 +52,8 @@ namespace Chapter2.Controllers
         [HttpPost]
         public ViewResult FormReservasi(Models.GuestResponse guestResponse)
         {
-            if (ModelState.IsValid)
+            //Checking for Form Validation Errors
+            if (ModelState.IsValid)    
             {
                 // TODO: Email response to the party organizer
                 return View("Thanks", guestResponse);
