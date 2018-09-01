@@ -20,14 +20,18 @@
 </head>
 <body>
     <div class="panel panel-success">
-        <div class="panel-heading text-center"><h4>FORM KEHADIRAN</h4></div>
+        
         <div class="panel-body">
 
             <!-- utk mengembalikan ke view awal dr page ini-->
             @using (Html.BeginForm(new { @class = "form-horizontal", role = "form" }))
 
             {
+<<<<<<< HEAD
                 
+=======
+                <div class="panel-heading text-center"><h4>FORM KEHADIRAN</h4></div>
+>>>>>>> bb87d17522912c5feb7bbd7fd0a27bf9dfc2e08e
                 <hr/>
 
                 @Html.ValidationSummary()   <!--utk memvalidasi dr tiap texbox yg diisi sesuai dg guestresponse jk blm mk muncul pesan error terus-->
